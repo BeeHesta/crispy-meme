@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flipping Cards</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f39d1281; /* Background color */
+        position: relative; /* Add relative positioning to the body */
+    }
+
+    .card {
+        width: 300px;
+        height: 500px;
+        perspective: 1000px;
+        margin: 20px;
+        box-shadow: 5px 5px 5px 5px #6e614c81;
+    }
+    .card-inner {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    .card:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-front {
+        background-color:#F39C12; /* Front side background color */
+    }
+
+    .card-back {
+        background-color: #F39C12; /* Back side background color */
+        transform: rotateY(180deg);
+    }
+    
+    .card-content {
+        max-width: 80%;
+        text-align: center;
+    }
+    
+    h1 {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute; /* Position the h1 absolutely */
+        top: 10px; /* Add space from the top */
+        width: 100%; /* Full width */
+        color: #4a2f03; /* Text color */
+        font-size: 35px; /* Adjust the font size */
+        z-index: 1; /* Ensure it's above the cards */
+    }
+
+    .additional-info {
+        position: absolute;
+        top: 60px; /* Add space from the top */
+        width: 100%;
+        text-align: center;
+        color:#4a2f03;
+        font-size: 16px;
+        z-index: 1; /* Ensure it's above the cards */
+    }
+
+    .copyright {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: 12px;
+        color: white;
+    }
+</style>
+</head>
+<body>
+    <h1> Peaceful family life</h1>
+    <p class="additional-info"> Would you like to discover what is really going on in this household? <br> Flip the cards to see more!</p>
+    <div class="card" >
+        <div class="card-inner">
+            <div class="card-front">
+                <img height="95%" width="90%" src="assets/images/sceane1.jpg" >
+            </div>
+            <div class="card-back">
+                <div class="card-content">
+                    "In my kitchen, the scent of pie fills the air, <br> 
+                    a comforting company to my baking is my dearest pet Karpy."
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card" style="height: 300px; width: 500px;">
+        <div class="card-inner">
+            <div class="card-front">
+                <img height="95%" width="90%" src="assets/images/Scene2.jpg" >
+            </div>
+            <div class="card-back">
+                <div class="card-content">
+                    "With anticipation, I unwrap the gift, joy filling the room. 
+                    Everybody enjoys some good Christmas gifts " 
+                    <a href="https://en.wikipedia.org/wiki/Tom_and_Jerry#:~:text=Tom%20and%20Jerry%20is%20an,William%20Hanna%20and%20Joseph%20Barbera." style="color: black;"> 
+                        -1940 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front"> <img height="95%" width="90%" src="assets/images/scene3.jpg" >
+            </div>
+            <div class="card-back">
+                <div class="card-content">
+                    <a href="http://127.0.0.1:5500/gift.html"  style="color: black;" >
+                        "Lemonade always refreshes me on a hot summer day, Don't you agree?"
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="copyright">
+        Copyright © 2024 KC:RF All rights reserved. <br>
+        Contact us: aistexz@gmail.com
+    </p>
+</body>
+</html>
